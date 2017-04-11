@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/footballcourt"
+    tools:context="hu.borde.goalkeeper.GoalKeeper">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:background="@drawable/box">
+
+                <TextView
+                    android:id="@+id/team1ResultLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Team 1"
+                    android:textColor="@android:color/white"
+                    android:textSize="40sp"/>
+
+                <TextView
+                    android:id="@+id/team1OverallScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/team1ResultLabel"
+                    android:background="@drawable/border"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:textAlignment="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="0"
+                    android:textSize="40sp"/>
+
+                <TextView
+                    android:id="@+id/team1GoalLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/team1OverallScore"
+                    android:textColor="@android:color/white"
+                    android:text="Goals"
+                    android:textAlignment="center"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/team1Goals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/team1GoalLabel"
+                    android:background="@drawable/border"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:textAlignment="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="0"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/team1PenaltyLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/team1Goals"
+                    android:textColor="@android:color/white"
+                    android:text="Penalties"
+                    android:textAlignment="center"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/team1Penalties"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/team1PenaltyLabel"
+                    android:background="@drawable/border"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:textAlignment="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="0"
+                    android:textSize="20sp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <Button
+                    android:id="@+id/goal1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Goal"
+                    android:onClick="incrementGoal"/>
+
+                <Button
+                    android:id="@+id/pen1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="11"
+                    android:onClick="incrementPenalty"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:background="@drawable/box">
+
+                <TextView
+                    android:id="@+id/team2ResultLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:text="Team 2"
+                    android:textSize="40sp"/>
+
+                <TextView
+                    android:id="@+id/team2OverallScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/team2ResultLabel"
+                    android:background="@drawable/border"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:textAlignment="center"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="40sp"
+                    android:text="0"/>
+
+                <TextView
+                    android:id="@+id/team2GoalLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/team2OverallScore"
+                    android:textColor="@android:color/white"
+                    android:text="Goals"
+                    android:textAlignment="center"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/team2Goals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/team2GoalLabel"
+                    android:background="@drawable/border"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:textAlignment="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="0"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/team2PenaltyLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/team2Goals"
+                    android:textColor="@android:color/white"
+                    android:text="Penalties"
+                    android:textAlignment="center"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/team2Penalties"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/team2PenaltyLabel"
+                    android:background="@drawable/border"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:textAlignment="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="0"
+                    android:textSize="20sp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <Button
+                    android:id="@+id/goal2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Goal"
+                    android:onClick="incrementGoal"/>
+
+                <Button
+                    android:id="@+id/pen2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="11"
+                    android:onClick="incrementPenalty"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:text="Reset"
+            android:onClick="resetResults"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
